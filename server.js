@@ -39,8 +39,6 @@ server.get('*', (req, res)=>{
 let options = {
   port:process.env.PORT || 1818,
   host:'127.0.0.1',
-  key: fs.readFileSync('./src/SSL/key.pem'),
-  cert: fs.readFileSync('./src/SSL/private.pem')
 };
 
 let serverSSL = http.createServer(server);

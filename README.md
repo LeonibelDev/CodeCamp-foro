@@ -26,6 +26,7 @@ Leonibel SR <https://github.com/LeonibelDev>
     * TEMPLATES
 
 ## for execute
+* install the node modules run -> **npm install**
 Modify the file db_connect in [./src/config/db_connect.js]
 * add you db port of postgres
 * add you db password of postgres 
