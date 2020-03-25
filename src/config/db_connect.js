@@ -8,8 +8,8 @@ const pool = new Pool({
         user: 'postgres',
         host: 'localhost',
         database: 'codecamp',
-        password: 'CODECSYSDB',
-        port: 5432
+        password: '',
+        port: 
     });
 
 module.exports = pool;
