@@ -10,4 +10,29 @@ Leonibel SR <https://github.com/LeonibelDev>
 ## main file
 * server.js 
 
+##  tree / structure
+* server.js
+* src
+  * API
+  * config
+  * db_structure
+  * PUBLIC
+    * FONTS
+    * favicon
+  * STATIC
+    * CSS
+    * JS
+  * VIEWS
+    * TEMPLATES
 
+## for execute
+Modify the file db_connect in [./src/config/db_connect.js]
+* add you db port of postgres
+* add you db password of postgres 
+
+create the schemes of postgres in your system. the file is [./db_structure/project_Structure_db.sql]
+
+## node 
+**npm run start**
+or
+**node server.js**
