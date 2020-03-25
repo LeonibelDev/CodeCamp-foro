@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<%include templates/css-extras-complement%>
+	<link rel="stylesheet" type="text/css" href="./api_css.css">
+</head>
+<body>
+				<form method="post" action="/foro">
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-md-5">
+					<label><h4>TITLE*</h4></label>
+					<input type="text" name="title" class="form-control" required="">
+					
+					<label><h4>POSTING CONTENT</h4></label>
+					<textarea name="content" class="form-control" rows="14" ></textarea>
+					 
+					<div>
+						<h4>TYPE*</h4>
+						<input type="radio" name="add_q" value="question"> <label>Solo es una pregunta</label>
+						<br>
+						<input type="radio" name="add_q" value="add"> <label>Anuncio o colavoracion</label>		
+					</div>
+	
+			</div>
+			<div class="col-md-4">
+				<label><h4>CATEGORY*</h4></label>	
+							<select class="custom-select" required="" name="tag1">
+								<option>NULL</option>
+								<option>TECNOLOGIA</option>
+									<optgroup>
+										<option>WEB<i class="fas fa-laptop"></i></option>
+										<option>OS</option>
+										<option>NATIVE</option>
+										<option>P.W.A</option>
+										<option>LENGUAJES</option>
+										<option>SERVIDORES</option>
+									</optgroup>
+								<option>SALUD</option>
+								<option>MODA</option>
+								<option>ESTILO DE VIDA</option>
+								<option>MARKETING</option>
+								<option>ENTRETENIMIENTO</option>
+							</select>
+
+					<label><h4>TAGS*</h4></label>
+					<div class="row">
+						<div class="col-md-5">
+							<input type="text" name="tag2" class="form-control" required="">
+						</div>
+						<div class="col-md-5">
+							<input type="text" name="tag3" class="form-control" required="" placeholder="required">
+						</div>
+					</div>
+					
+					<label><h4>LINK (NO REQUIRED)</h4></label>
+					<div>
+					<input type="" name="link" class="form-control">
+					</div>
+
+					<div class="policity mt-5">
+						<p class="info-start">
+							Al aceptar estos terminos estaras publicando esta informacion en la plataforma. <code>Recuerda que tu publicacion debe cumplir con los requicitos y respetar los terminos y privacidad de la plataforma. lee mas sobre esto <a href="/about#privacity" class="v5_link">aqui</a></code> 
+
+							<div>
+								<input type="checkbox" name="" required="">
+								<p class="badge">aceptar condiciones!</p>
+							</div>
+						</p>
+					</div>	
+					
+					<button class="btn btn-primary btn-block mt-3">SUBMIT <i class="fas fa-paper-plane"></i></button>		
+			</div>
+		</div>
+	</div>
+				</form>
+</body>
+</html>

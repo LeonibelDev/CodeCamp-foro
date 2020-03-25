@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style_extra.css",
+	"sources": [
+		"SASS/style_extra.sass"
+	],
+	"sourcesContent": [
+		""
+	],
+	"names": [],
+	"mappings": ""
+}

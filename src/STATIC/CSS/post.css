@@ -1,0 +1,58 @@
+body{
+	background:url('./forowallp.jpg');
+	background-attachment:fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.foro-post{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.view-doc{
+	background:#fff;
+	border-radius: 4px;
+	color:#000;
+}
+
+.view-doc .doc-title{
+	text-align: center;
+}
+
+.view-doc .doc-body{
+	padding: 10px 30px;
+}
+
+.doc-body{
+	text-align: left;
+}
+
+.view-doc hr{
+	background:#000;
+	width: 60%;
+	margin-top: -5px;
+}
+
+.doc-footer{
+	padding: 10px 30px;
+}
+
+.doc-action-back{
+	padding: 10px 30px;
+}
+
+.asd{
+	margin-left: -15px;
+	color: #fff;
+	background-color: #343a40;
+}
+
+.divisorLine{
+	width: 60%;
+	background:#fff;
+}
+
+.fas{
+	color: rgba(0,0,0.4);
+}

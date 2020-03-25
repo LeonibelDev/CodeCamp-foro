@@ -1,0 +1,190 @@
+/*MENU FONT-FAMILY*/
+
+@font-face{
+	font-family:"MENUFF";
+	src:url('FONTS/UrbanRetro.ttf');
+}
+
+/*FONTS*/
+
+@font-face{
+	font-family:"URBAN";
+	src:url('FONTS/Wood Hell Company.otf');
+}
+
+.doc-header {
+	/*padding-top: 30px;*/
+	text-align: center;
+	background-image:url('IMGCWS/toolsandtoys_20141001_01.jpg');
+	background-size: cover;
+	background-position: center 20%;
+	color: #fff;
+	margin-top: 80px;
+}
+
+.doc-header-foro {
+	/*padding-top: 30px;*/
+	text-align: center;
+	background-image:url('Flower-4.jpg');
+	background-size: cover;
+	background-position: center -85%;
+	color: #fff;
+	margin-top: 0px;
+}
+
+.doc-header-stc{
+	text-align: center;
+	background-image:url('troy-t-WdX1HdFAqeQ-unsplash.jpg');
+	background-size: cover;
+	background-position: center -85%;
+	color: #fff;
+	margin-top: 0px;	
+}
+
+.doc-header-stc .padding-y{
+	padding:0 10%;
+}
+
+.doc-header div{
+	padding-left:15%;
+	padding-right:15%; 
+}
+
+.prop{
+	margin-top: 20px;
+}
+
+.prop div p{
+	font-family: Segoe UI;
+
+}
+
+.prop div{
+	padding: 10px;
+	margin-left: 10px;
+	border-left: solid 1px rgba(244, 128, 36, .4);
+	width: 30%;
+	position:;
+	display:inline-table;
+	color: rgba(0,0,0,.7);
+	text-align: left;
+	font-family: Segoe UI;
+	word-wrap: ;
+
+}
+
+.prop div div{
+	padding: 0;
+	width: 100%;
+	padding-left: 5px;
+}
+
+.prop .prop-t{
+	display: block;
+	font-size: 24px;
+	color: rgba(0,0,0,.8);
+	font-family: Segoe UI;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+.prop code{
+	display: block;
+}
+
+.prop div:nth-child(2) div a{
+	margin-top: 6px;
+	display: block;
+	color:rgba(2,122,156,1); 	
+	margin-top: -10px;
+}
+
+ .hash{
+	font-size: 30px;
+	font-weight: 100;
+	color: rgba(0,0,0,.8);
+	margin-right: 2px;
+	font-family:serif;
+	text-transform: initial;
+	transform-style: initial;
+}
+
+.prop div:nth-child(2) div a:hover .hash{
+	text-decoration: none;
+	margin-right: 4px;
+}
+
+.prop div:nth-child(2) div a:hover .hash:after{
+	content: '∞';	
+	font-size: 20px;
+	text-decoration: none;
+	margin-right: 4px;
+	font-family: serif;
+}
+
+.getting_stated hr{
+	background: rgba(0,0,0,.2);
+	margin-top: -2px;
+	display: block;
+}
+
+.getting_stated p{
+	color: rgba(0,0,0,.8);
+	font-family: Segoe UI;
+	font-weight: 100;
+	margin-bottom: 10px;
+}
+
+.getting_stated{
+	width:60%;
+}
+
+.info-start{
+background:rgba(30,30,30,.1);
+padding: 20px;
+border-radius: 3px;
+border-left: solid 6px #fd7e14;	
+display: block;
+margin-top: 5px;
+color: rgba(0,0,0,.8);
+background: #fff;
+text-align: left;
+border-top: 1px solid rgba(0,0,0,.2);
+border-bottom: 1px solid rgba(0,0,0,.2);
+border-right: 1px solid rgba(0,0,0,.2);
+margin-bottom: 5px;
+}
+
+.curl{
+	color:#1BBB06;
+	background: #000; 
+	padding: 20px 5px;
+	margin-top: 10px;
+	font-family: consolas;
+
+}
+	
+.curl code{
+	directionisplay: inline;
+}
+
+
+.curl-limit{
+	height: 400px;
+	word-wrap: normal;
+	overflow-y: auto;
+}
+
+.curl pre{
+	font-family: consolas;
+	color: rgba(256, 256, 256, .4);
+	word-wrap: normal;
+	width: 100%;
+	overflow-wrap: normal;
+	overflow: hidden;
+	text-align: left;
+}
+
+.getting_stated h5{
+	color:rgba(2,122,156,1);
+}

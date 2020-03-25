@@ -1,0 +1,60 @@
+footer{
+	/*background: url('./wave.svg');*/
+	background-position:;
+}
+
+footer::before {
+	content: "";
+	display: block;
+	height: 10px;
+	width: 100%;
+	/*background: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);*/
+}
+
+footer a, footer p{
+	text-decoration: none;
+	color: #000;
+}
+
+footer fa-phone{
+	text-decoration: blink;
+	color: #000;	
+}
+
+footer p a:hover footer p a::before{
+	transform: rotate(-90deg);
+	display: none;
+}
+
+footer .blc{
+	border-left: solid 1px gray;
+	padding: 10px 25px;
+}
+
+footer .copy span{
+	font-family: Segoe UI;
+	font-weight: 100;
+	text-align: center;
+}
+
+footer .col-md-4 p, footer p a{
+	font-family: Segoe UI;
+	font-weight: 200;
+}
+
+footer .fot-copy span{
+	font-size: 14px;
+	color: rgba(0,0,0,.4);
+}
+
+footer .logout{
+	cursor: pointer;
+	font-family: Segoe UI;
+	font-weight: 200;
+
+}
+
+footer .logout:hover, footer p a:hover{
+	color: rgba(2,122,156,1);
+	text-decoration: underline;
+}

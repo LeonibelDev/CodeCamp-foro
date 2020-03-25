@@ -1,0 +1,38 @@
+<div class="new_menu py-2">
+	<div class="container">
+		<div class="row" style="transform: translateY(12%);">
+			<div class="col-md-2">
+				<!-- <div class="brand2">
+					<img src="Logo.png">
+				</div> -->
+			<h5 style="font-family: monospace;">[ ATM CAMP ]</h5>
+
+			</div>
+			<div class="col-md-4">
+				<nav>
+					<span class="home"><a href="/home">HOME</a></span>
+					<span class="foro"><a href="/foro">FORO</a></span>
+					<span class="statistics"><a href="/statistics">STATISTICS</a></span>
+					<!-- <span><a href="/about">ABOUT</a></span> -->
+				</nav>	
+			</div>
+			<div class="col-md-4">
+				<div class="menu-radius">
+					<form onsubmit="sendForm()" method="GET" action="">
+						<input type="text" name="" placeholder="Search... id [...]" class="search">
+					<button type="submit">
+						<i class="fas fa-search"></i>
+					</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div>
+					<%if(name.length > 0){%>
+						<span class="badge"><%=name%></span>
+					<%}%>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

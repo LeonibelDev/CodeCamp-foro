@@ -1,0 +1,89 @@
+<div class="down" id="formulario-login">
+	
+	<link rel="stylesheet" type="text/css" href="./login-style.css">
+
+<div class="container login">
+	<div class="row">
+			<div class="col-md-5">
+			<form method="POST" action="/login">
+				
+			<div id="login" class="form py-5 px-4 bg-dark">
+				<h3 class="text-center text-light">REGISTRATE</h3>
+				<div class="form-group">
+					<input type="email" placeholder="E-MAIL" class="form-control"  id="login_input" name="email">
+				</div>
+				<div class="form-group">
+					<input type="password" name="password" placeholder="PASSWORD" class="form-control" >
+				</div>
+				<button type="submit" class='btn btn-primary btn-block'>LOGIN</button>
+		
+			<div class="options text-center">
+				
+				<span class="link text-primary" id="create-account">
+					create account
+				</span>
+				<span class="text-white">or</span>
+				<span class="link text-primary" id="register">
+					register <span>go to <a href="/">home</a></span>
+				</span>
+			</div>
+			</div>
+			</form>
+
+		<!--SCRIPT FOR CLEAR LOGIN FORM-->	
+			<script type="text/javascript">
+				var a = document.querySelectorAll('.form-control');
+		var b = document.querySelectorAll('.btn')onclick = submit;
+
+		for (var i = 0; i < btn.length; i++) {
+			b[i].onclick = submit;
+		}
+		function submit(){
+			/*for (var i = 0; i < a.length; i++) {
+				a[i].value = "";
+			}	*/
+			alert("data");
+		}
+
+		submit();
+			</script>
+		<!--SCRIPT FOR CLEAR LOGIN FORM-->	
+
+		</div>
+		<div class="col-md-6">
+			<div id="login" class="form py-5 px-4 bg-dark">
+				<h3 class="text-center text-light">CREAR CUENTA</h3>
+				
+				<div class="form-group">
+					<input type="text" name="" placeholder="NAME" class="form-control" id="create-account_input">	
+				</div>
+				<div class="form-group">
+					<input type="mail" name="" placeholder="E-MAIL" class="form-control">
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+					<input type="password" name="" placeholder="PASSWORD" class="form-control">
+				</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+					<input type="password" name="" placeholder="CONFIRM PASSWORD" class="form-control">
+				</div>
+					</div>
+				</div>
+				
+				
+				<button class="btn btn-primary btn-block">SIGN IN</button>
+			<div class="text-center">
+				<span class="link text-primary text-center" id="register ocultar-login">
+					cerrar
+				</span>
+			</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+	<script type="text/javascript" src="./close.login.form.js"></script>

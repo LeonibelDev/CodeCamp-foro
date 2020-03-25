@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title %></title>
+	<link rel="stylesheet" type="text/css" href="./foro.css">
+	<link rel="stylesheet" type="text/css" href="./primary.css">
+	<%include templates/css-extras-complement%>
+   	<script type="text/javascript">
+   		window.onload = () =>{
+   			var documentlengt = document.querySelectorAll('.document');
+   		for(var x = 0; x < documentlengt.length; x++){
+   			
+   			var username = document.querySelectorAll('.cretor')[x].innerHTML.trim();
+   			var letterUser = document.querySelectorAll('.letter-ico')[x];
+
+   			letterUser.innerHTML = username.charAt(0);
+
+
+   			var docbody = document.querySelectorAll('.doc-body p')[x];
+   			docbody.innerHTML = docbody.innerHTML.substring(0, 100) + '...';
+   		}
+
+   			
+   		}	
+   	</script>
+
+</head>
+<body>
+	
+	<%include templates/menu%>
+	<div class="" style="width: 96%;">	
+	<div class="all py-1">
+		<!-- <div>
+			<img src="Logopit_1574620691139-1-1.jpg">
+		</div> -->
+		
+		<!-- HEADER -->
+		<div class="container">
+			<div class="row contend mb-2 header-tags">
+				<div class="col-md-10">
+					<div class="tags">
+					<span><h3 class="tag filtertitle">Filtrar por: </h3></span>
+						<a href="" class="tag filter-option">[Likes]</a>
+						<a href="" class="tag filter-option">[Relevancia]</a>
+						<a href="" class="tag filter-option">[Vistas]</a>
+						<a href="" class="tag filter-option">[Tendencia]</a>
+						<a href="" class="tag filter-option">[Comentarios]</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<section class="tag bg-light">
+						NAN/NAN
+					</section>
+				</div>
+			</div>
+		</div>
+		
+		<!-- HEADER -->
+		<div class="row-dad">
+			<div class="col-mdr-3">
+				<div class="asid">
+				
+			<div class="aside-tags">	
+				<div class="aside-title">
+					<h3 class="">CATEGORIAS</h3>
+					<hr>
+				</div>
+				
+				<ul class="nav">
+					<%for(var i = 0; i < post_data.length; i++){%>
+					<li class="tag">
+						<%=post_data[i].TAG_1%>
+						<span class="badge"><%=result.length%></span>
+					</li>	
+					<%}%>
+				</ul>
+			</div>
+		
+				<div>
+					<div class="card">
+   						<h3>ENTERATE DE LO NUEVO</h3>
+   						<p>Tienes la posibilidad de leer y filtrar sobre tus temas de prferencia</p>
+
+   						<a href="" class="btn btn-primary">ABOUT</a>
+   					</div>
+				</div>
+
+				<div>
+					<table class="table"> 
+						
+					</table>
+				</div>
+			
+		</div>
+			</div>
+			<div class="col-mdr-7">
+					<div class="all-cont-post"> 
+		<div class="contend">
+			<div class="">
+
+				<!-- ALL CONTEND RIGHT HERE -->
+				<%for(var i = 0; i < post_data.length; i++){%>
+				<div class="document">
+					<div class="row">
+
+						<!-- col [1] -->
+						<div class="col-md-1 rating">
+							<div><a href=""><i class="fas fa-long-arrow-alt-up"></i></a></div>
+							<div><span class="badge">321.3k</span></div>
+							<div><a href=""><i class="fas fa-long-arrow-alt-down"></i></a></div>
+						</div>
+
+						<div class="col-md-7">
+							<div class="title-document">
+								<strong>
+									<a href="/post/<%=post_data[i]._ID%>">
+										<%=post_data[i].TITLE%>
+									</a>
+								</strong>
+							</div>
+							<section class="doc-body text-document">
+								<p><%=post_data[i].DOC_BODY%></p>
+							</section>
+							<div class="mt-4">
+								<span class="badge tag topic"><%=post_data[i].TAG_1%></span>
+								<span class="badge tag"><%=post_data[i].TAG_2%></span>
+								<span class="badge tag"><%=post_data[i].TAG_3%></span>
+							</div>
+							<div class="mt-2 perfilacion">
+								<div class="row">
+									<div class="col-md-3">
+										<span class="align-self-center">
+											<i class="fas fa-comment"></i> 
+											<%=post_data[i].TITLE.length%>
+										</span>
+									</div>
+									<div class="col-md-3">
+										<span>
+											<i class="fas fa-eye"></i>
+											<%=post_data[i].VIEWS%>	
+										</span>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<section>
+							<section>
+								<time><%=post_data[i].JOIN%></time>
+							</section>
+							<section>
+								author: [<cite class="cretor"> <%=post_data[i].AUTHOR%> </cite>]
+							</section>
+
+							<section>
+								<div>
+									<span class="letter-ico"></span>
+								</div>
+							</section>
+							<section class="mt-2">
+								<a name="<%=post_data[i]._ID%>" href="/post/<%=post_data[i]._ID%>" class="btn-group">
+									<span class="btn btn-primary btn-sm"><i class="fas fa-book"></i></span>
+									<span class="btn btn-outline-primary btn-sm">Read post</span>
+								</a>
+							</section>
+							</section>
+						</div>
+					</div>
+				</div>
+				<%}%>
+				<!-- DOCUMENT -->
+			</div>
+			<!--  -->
+			<div>
+				
+			</div>
+			<!--  -->
+		</div>
+	</div>
+			</div>
+			
+		</div>
+	</div>
+
+	</div>
+	<%include templates/footer%>
+</body>
+</html>

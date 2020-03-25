@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+	<%include templates/css-extras-complement%>
+
+	<script type="text/javascript" src="./validation.js"></script>
+
+	<!-- <script defer="" type="text/javascript">
+		fetch('/api', {
+			method: "GET",
+		});		
+	</script> -->
+	<link rel="stylesheet" type="text/css" href="fullpage.min.css">
+</head>
+<body>
+<div class="body" id="fullpage">	
+
+<section class="section s1">
+	<div class="row" id="section0">
+		<div class="col-md-4 right">
+			<div class="col-md-7 text-light text">
+				<h2 class="display-4">Application Login Page</h2>
+
+				<p>
+					<a href="/login#s1">Ya tienes una cuenta?</a>
+				</p>
+				<hr class="hr1"><span class="or">or</span><hr class="hr2">
+					<!-- <a href="/" class="display-4">go to home</a> -->
+			
+					<a href="/login#s1"><button class="change1 btn btn-outline-primary btn-block">LOG IN</button></a>
+					<!-- <button class="change2 none">SIGN UP</button> -->
+
+			</div>
+		</div>
+
+
+		<div class="col-md-6 login">
+			<div class="form2">
+			<form method="POST" action="/new" >
+				<div class="group">
+					<h4><label for="">User Name</label></h4>
+					<!-- <div class="form-inline"> -->
+						<input  type="text" name="name" class="form-control" placeholder="User Name max.12" maxlength="12" minlength="3" id="name" required="" autocomplete="no">
+
+						<!-- <i class="fas fa-user"></i> --> 
+
+					<!-- </div> -->
+				</div>
+				
+				<div class="group">
+					<h4><label for="">Email</label></h4>
+					<!-- <div class="form-inline"> -->
+						<input  type="email" name="email" class="form-control" placeholder="Email" autocomplete="no" id="email" required="">	
+	
+						<!-- <i class="fas fa-envelope"></i> -->
+					<!-- </div> -->
+				</div>
+
+				<div class="group">
+					<h4><label for="">Password</label></h4>
+					<!-- <div class="form-inline"> -->
+						<input  type="password" name='password' class="form-control" placeholder="Password" autocomplete="no" id="password" required="">
+
+						<!-- <i class="fas fa-lock"></i> -->
+
+					<!-- </div>	 -->
+				</div>
+
+					<button type="submit" class="btn btn-block btn-dark btn-lg">Sign Up <i class="fas fa-arrow-alt-circle-right"></i></button>
+					<!-- <button type="reset" class="btn btn-secondary">Reset <i class="fas fa-trash"></i></button> -->
+			</form>	
+			</div>
+		</div>
+	</div>
+</section>	
+
+
+<!-- LOGIN SECTION  -->
+
+<section class="section s2">
+		<div class="row" id="section1">
+		<div class="col-md-4 right">
+			<div class="col-md-7 text-light text">
+				<h2 class="display-4">Application Login Page</h2>
+
+				<p>
+					<a href="/login#s2">Aun no tienes una cuenta?</a>
+				</p>
+				<hr class="hr1"><span class="or">or</span><hr class="hr2">
+					<!-- <a href="/" class="display-4">go to home</a> -->
+			
+					<a href="/login#s2"><button class="change1 btn btn-outline-primary btn-block">SIGN UP</button></a>
+					<!-- <button class="change2 none">SIGN IN</button> -->
+
+			</div>
+		</div>
+
+
+		<div class="col-md-6 login">
+			<div class="form2">
+			<form method="POST" action="/validate" >
+				
+				<div class="group">
+					<h4><label for="">Email</label></h4>
+					<!-- <div class="form-inline"> -->
+						<input  type="email" name="email" class="form-control" placeholder="Email" autocomplete="no" id="email" required="">	
+	
+						<!-- <i class="fas fa-envelope"></i> -->
+					<!-- </div> -->
+				</div>
+
+				<div class="group">
+					<h4><label for="">Password</label></h4>
+					<!-- <div class="form-inline"> -->
+						<input  type="password" name='password' class="form-control" placeholder="Password" autocomplete="no" id="password" required="">
+
+						<!-- <i class="fas fa-lock"></i> -->
+
+					<!-- </div>	 -->
+				</div>
+
+					<button type="submit" class="btn btn-block btn-dark btn-lg">Logn In <i class="fas fa-arrow-alt-circle-right"></i></button>
+					<!-- <button type="reset" class="btn btn-secondary">Reset <i class="fas fa-trash"></i></button> -->
+			</form>	
+			</div>
+		</div>
+	</div>
+</section>
+
+</div>
+<script type="text/javascript" src="button_login_form_action.js" defer=""></script>
+	<script type="text/javascript" src="fullpage.min.js"></script>
+	<script type="text/javascript" src="scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title><%=title.title%></title>
+	<%include templates/css-extras-complement%>
+	<link rel="stylesheet" type="text/css" href="./clock.css">
+	<link rel="stylesheet" type="text/css" href="./api_css.css">
+
+	<!-- sweetalert2 -->
+	<!-- <script type="text/javascript" src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+	<script type="text/javascript" src="sweetalert2/dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="sweetalert2/dist/sweetalert2.min.css">
+	<link rel="stylesheet" type="text/css" href="sweetalert2/dist/sweetalert2.css"> -->
+
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+	Swal.fire('Hello world!')
+</script>
+ -->
+ <%if(visit){%>	
+	<%if(visit.visits <= 3){%>	
+	<style type="text/css">
+		.alert span{
+			font-size:13px;
+			padding:10px 8px;
+			font-family:Segoe UI;
+		}
+
+		.alert{
+			background:rgba(0, 204, 34, 0.2);
+			color:#fff;
+		}
+
+		.alert .badge{
+			color:#fff;
+			border:solid 1px #fff;
+			padding:4px;
+		}
+
+		.alert a{
+			text-decoration:underline;
+		}
+	</style>
+
+	<div class="cookie-inf alert fixed-bottom mx-3">
+		<span class="counter badge url" >5</span>
+		<span class="">
+			Este sitio web utiliza cookies para las sesiones de los usuarios, por lo que no deberia de preocuparte navegar!. Estas seran eliminadas automaticamente despues de cerrar la pagina... <a href="/about#cookie">Mas informacion</a>
+		</span>
+	</div>
+	
+	<!-- CLOSE COOKIE INF -->
+
+<script type="text/javascript">
+		var info = document.querySelectorAll('.cookie-inf')[0]
+		var cont = document.querySelectorAll('.counter')[0]
+		var cookie_comprovant = document.cookie
+
+
+        	var i = 0
+    	function rtn(){
+
+        cont.innerHTML = 5 - i;
+        	i += 1
+   
+        	if (i == 6) {
+            	clearInterval(rtn)
+            	info.parentNode.removeChild(info)
+        	}	
+    	}
+
+		var rtn = setInterval(rtn, 1000)
+
+	
+</script>
+<%}%>
+<%}%>
+	<!-- CLOSE COOKIE INF -->
+<div class="globo">
+   <div class="color-overlay pb-4">
+<%include templates/new_menu%>
+<%include templates/login%>
+
+	<div class="container">
+	<div class="row py-5">
+<!-- TEXT HOME-->
+		<div class="col-md-6 text-center p-5 aling-self-center carousel text-light">  
+
+<div class="p-3 mb-2 base">
+	<div>
+		
+	<div class="trans">
+			<h1 class="display-5 title-2">ATM CAMP</h1>
+			<h1 class="title-2"><span class="v5_link px-2">Community forum</span></h1>
+	</div>
+				<hr>
+			<p style="padding: 10px;">
+				<span class="v5_link">ATM CAMP</span> es una comunidad de usuarios interezados en compartir sus conocimientos y experiencias en temas actuales, al igual de el gusto de aprender. <i class="fas fa-bookmark"></i>
+			</p>
+	</div>
+</div>
+		<div class="dsa_container">
+
+		<%if(name.length == 0 || name.length < 1){%>
+		<div class="info-start">
+			<i class="fas fa-exclamation-triangle"></i> recuerda que debes iniciar cesion antes de hacer tus publicaciones <a href="/login#s1" class="url">login</a>
+		</div>
+		<%}%>	
+				
+		</div>
+		</div>
+		<div class="col-md-6 mt-5">
+			<div class="">
+				<div class="time_lock">
+				<div class="bg-dark">
+					<div id="hora"></div><span class="dob_point">:</span>
+					<div id="minuto"></div><span class="dob_point">:</span>
+					<div id="segundos"></div>
+				</div>	
+
+				<div class="bg-light">
+					<div id="mer"></div>
+					<div id="fecha"></div>
+				</div>	
+				
+				</div>
+			</div>	
+		</div>
+<!-- TEXT HOME-->
+	</div>
+
+<!-- READ MORE SIMBOL-->
+	<!-- <div class="row read-more">
+		<div class="col-md-12 text-center text-light">
+			<span class="url bg-light">@ATM_CAMP <i class="fab fa-twitter-square text-primary"></i></span>
+			<span class="url bg-light">@ATM_CAMP <i class="fab fa-facebook-square text-primary"></i></span>
+			<span class="url bg-light">@ATM_CAMP <i class="fab fa-medium"></i></span>
+		</div>
+	</div> -->
+<!-- READ MORE SIMBOL-->
+
+   </div>	
+</div>
+
+
+<!-- FOUNDERS -->
+<div>
+	<div class=" founders">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="laptop-2038734_960_720.jpg">		
+					</div>
+					<div class="col-md-9">
+						<p><span class="tachet">ʻʻ</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+						<cite>- Leonibel SR</cite>
+					</div>
+				</div>				
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="laptop-2038734_960_720.jpg">		
+					</div>
+					<div class="col-md-9">
+						<p><span class="tachet">ʻʻ</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+						<cite>- Rordany CR</cite>
+					</div>
+				</div>				
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- FOUNDERS -->
+<!-- MIDDLE CONTEND -->
+
+<div class="py-5 middle text-light">
+	<div class="py-3 container">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>This is a test from post forum</h4>
+				<hr style="width:30%; background:#fff; margin-left:-70%;">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+			</div>
+			<div class="col-md-6">
+				<img src="Devices-swe.png" style="width: 90%;" class="aling-self-center img-center-page">
+			</div>
+			<h3 style="font-weight: 100;"></h3>
+		</div>
+	</div>
+</div>
+<!-- MIDDLE CONTEND -->
+
+	<!-- FORM FOR CONTACT -->
+	<div class="CONTACT bg-dark py-5" id="contact" style="display:none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class=" p-4 cont-form" style="background:#fff; border-radius: 4px;">
+						<form name="dataexample" method="post" action="/test">
+							<input type="email" name="email" placeholder="EMAIL" class="form-control">
+							<textarea rows="7" name="content" class="form-control" placeholder="MESSAGE"></textarea>
+							<button class="btn btn-block btn-lg" style="background:#000; color:#fff;">SUBMIT</button>
+						</form>	
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+</div>
+	<!-- FORM FOR CONTACT -->
+
+<!-- FOOTER -->
+<%include templates/footer%>
+<!-- FOOTER -->
+	
+<script type="text/javascript" src="focus-form.js"></script>
+<script type="text/javascript" src="./MOSTRAR_MAS.JS"></script>
+<script type="text/javascript" src="./slider_home.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="meridian.js"></script>
+
+
+<!--  -->
+
+</body>
+</html>

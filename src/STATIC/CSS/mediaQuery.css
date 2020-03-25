@@ -1,0 +1,26 @@
+/*MEDIA  QUERY*/
+@media (max-width:500px){
+	.read-more{
+		display: none;
+	}
+
+	.menu{
+		display: none;
+	}
+
+	.brand{
+		width: 190%;
+	}
+}
+
+.simbol{
+	position: absolute;
+	top: 50%;
+
+}
+
+@media (max-width: 1000px){
+	.read{
+		display: none;x
+	}
+}

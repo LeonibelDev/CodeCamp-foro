@@ -1,0 +1,211 @@
+
+<script src="alertifyjs/alertify.min.js"></script>
+<link rel="stylesheet" href="alertifyjs/css/alertify.min.css" />
+<link rel="stylesheet" href="alertifyjs/css/themes/default.min.css" />
+
+<script type="text/javascript">
+  function salir(){
+    // alertify.defaults = { 
+    //  options: {
+    //             title: 'Confirmar Salida'
+    //           }
+    // }
+    // }
+    
+    alertify.confirm("¿Estas seguro que deseas salir? \nSi lo haces no podras acceder al foro", 
+      function(){
+        window.open('/logout', '_self')
+      },
+      function(){
+        return true
+      })
+  }
+      
+</script>
+<!-- <script type="text/javascript">
+  function salir() {
+    
+    var confirmation = confirm(`Estas seguro que deseas salir? \nSi lo haces no podras acceder al foro`);
+    
+    if (confirmation == true) {
+      window.open('/logout', '_self')
+    }
+
+    if (confirmation == false) {
+      let spl = document.cookie.split(',');
+      alert(spl);
+    }
+  }
+</script> -->
+<!-- Footer -->
+<%if(title == 'FORO'){%>
+<style type="text/css">
+  footer{
+    border-top: solid 1px rgba(0,0,0,.1);
+    background:#fff;
+    z-index: 1;
+  }
+
+  footer .btn{
+    box-shadow: none;
+  }
+</style>
+<%}%>
+
+<style type="text/css">
+  footer{
+    background:#fff;
+  }
+
+   footer .btn{
+    box-shadow: none;
+  }
+  footer p a{
+    color: #000;
+  }
+
+  time{
+      color: rgba(0,0,0,.3);
+      font-size: 10px;
+      font-family: Arial;
+    }
+</style>
+
+<%if(title != 'unique_post'){%>
+<link rel="stylesheet" type="text/css" href="./styleFooter.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+<%}%>
+<div class="">
+<footer class="page-footer font-small unique-color-dark pb-2">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left ">
+
+     <div class="row py-4">
+
+      <!--Grid column-->
+      <div class="col-md-3"></div>
+      <div class="col-md-6 ">
+        <form class="input-group" method="post" action="/home">
+          <input type="email" class="form-control form-control-sm" placeholder="Enter your email" name="email" autocomplete="off">
+          <div class="input-group-append">
+            <button class="btn btn-primary my-0" type="submit">Subscribe!</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+      <!--Grid column-->
+
+    </div>
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">@ATM_CAMP <i class="fab fa-twitter text-primary"></i></h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Resuelve tus dudas y comparte tu experiencia en CCA para ayudar a los principiantes en este mundo de conocimientos! <time>15-oct-2019</time></p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Services</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="/documentation">Rest API</a>
+        </p>
+        <p>
+          <a href="#!">Statistics</a>
+        </p>
+         <p>
+          <a href="/about">About</a>
+        </p>
+       
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">USER</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <%if(name.length == 0 || name.length < 1){%>
+           <p>
+          <a href="/login#s1">Login</a>
+        </p>
+        <p>
+          <a href="/login#s2">Sing up</a>
+        </p>
+        <%}%>
+        <%if(name.length > 0){%>
+         <p>
+          <span onclick="salir()" class="logout">Log Out</span>
+        </p>
+        <%}%>
+
+                    <h6 class="text-uppercase font-weight-bold">Privacity</h6>
+        <hr class="mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+        <p>
+          <a href="#!">Cookie <i class="fas fa-cookie-bite"></i></a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+       
+        <!-- <p>
+          <i class="fas fa-envelope-square"></i> atm.camp@dev.com
+        </p>
+        <p>
+          <i class="fab fa-facebook-square"></i> @ATM_CAMP_OFFICIAL
+        </p> --> 
+
+        <style type="text/css">
+          footer .url{
+            background: transparent;
+            text-align: right;
+            display: block;
+            margin-top: 0;
+          }
+
+          footer .url:first-child{
+            padding-top: 0;
+          }
+        </style> 
+        <p>
+          <span class="url">atm.camp@dev.com <i class="fas fa-envelope-square"></i></span>
+          <span class="url">@ATM_CAMP <i class="fab fa-twitter-square text-primary"></i></span>
+      <span class="url">@ATM_CAMP <i class="fab fa-facebook-square text-primary"></i></span>
+      <span class="url">@ATM_CAMP <i class="fab fa-linkedin"></i></span>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+      <div class="text-center copy fot-copy">
+          <span class="">
+          &copy; CopyRight 2019 - 2020 All Rights Reserved [ATM CAMP]
+        </span>
+      </div>
+  <!-- Footer Links -->
+</footer>
+</div>
+<!-- Footer -->

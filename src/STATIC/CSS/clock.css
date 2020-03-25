@@ -1,0 +1,40 @@
+#hora, #minuto, #segundos{
+	width: 31%;
+	padding: 40px 25px;
+	text-align: center;
+	/*background: rgba(0,0,0,1);*/
+	color: #fff;
+	display: inline-block;
+	font-size: 60px;
+	font-weight: 100;
+	font-family: 'Arial' Roboto;
+}
+
+.dob_point{
+	color: #fff;
+	font-size: 30px;
+	top: 50%;
+	transform: translateY(100px);
+	font-weight: 100;
+	font-family: 'Arial' Roboto;
+}
+
+#mer, #fecha{
+	padding: 20px 12px;
+	width: 48%;
+	display: inline-block;
+	/*background: #fff;*/
+	color: #000;
+	font-size: 30px;
+	font-weight: 100;
+	font-family: 'Arial' Roboto;
+	text-align: center;
+}
+
+#mer{
+	float: left;
+}
+#fecha{
+	float:;
+	margin-left: .3em;
+}

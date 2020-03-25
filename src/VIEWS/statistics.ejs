@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title.title%></title>
+    <%include templates/css-extras-complement%>
+
+    <script type="text/javascript" src="./raphael-min.js"></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./morris.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="morris.css">
+    <link rel="stylesheet" type="text/css" href="foro.css">
+    <link rel="stylesheet" type="text/css" href="foro2.css">
+    <link rel="stylesheet" type="text/css" href="./api_css.css">
+
+</head>
+<body>
+    <%include templates/new_menu%>
+<div class="row my-2 mt-5 pt-4" style="width: 100%; height: 100%;">
+    <div class="col-md-2">
+        <div class="menu-stc global-table-contend">
+           <div class="global-table-contend-head-top">
+            LOCAL-MENU   
+           </div>
+           <div class="global-table-contend-body">
+                
+           </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="container">
+            <div class="doc-header-stc">
+                <div class="color-overlay">
+                    <div class="py-5 color-overlay">
+                    <h2>ESTADISTICAS GENERALES</h2>
+                    <h3>DE ATM CAMP</h3>
+
+                    <div class="padding-y">
+                        <div class="color-overlay">Esta es la recopilacion mensaul de nuestros datos, registrados dia tras dia durante todo un mes!... Dicha informacion será tras su posterior relevancia. Claramente con paso de 30 dias </div>
+                       </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="graphics-list mt-4">
+                <div class="row">
+                    <div class="col-md-6" id="graphic" style="height: 250px;">
+                        
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <h3 class="url"><span class="hash">#</span> USUARIOS <i class="fas fa-users"></i></h3>
+                        <p>Esta Informacion Muestra el incremento de los registros de usuarios en el mes de enero</p>
+                    </div>
+                </div>
+            </div>
+</div>
+    </div>
+</div>
+        
+<script type="text/javascript" src="./lineas.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title.title%></title>
+<%include templates/css-extras-complement%>
+	<link rel="stylesheet" type="text/css" href="foro2.css">
+	<link rel="stylesheet" type="text/css" href="foro.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./animate.css">
+	<link rel="stylesheet" type="text/css" href="api_css.css">
+</head>
+<body>
+<%include templates/new_menu%>
+<div class="container">
+	<div class="doc-header">
+		<div class="color-overlay py-5">
+			<h2>API DE PUBLICACIONES</h2>
+			<h3>DE ATM CAMP</h3>
+			<div class="color-overlay">ATM CAMP API te brinda de una manera facil, acceder a todas las publicaciones de la comunidad, de una manera facil y rapida!</div>
+		</div>
+	</div>
+
+<center>
+	
+	<div class="prop">
+		<div>
+			<span class="prop-t">¿Que es la API de ATM CAMP?</span>
+			<p>
+				
+			Es una herramienta que obtiene y clasifica cada una de las publicaciones de la comunidad [ATM CAMP], mediante el consepto de ordenamiento en objetos de js (json) 
+			
+				<code>
+				[{<br>
+				 <code>
+				 	'data': '...'<br>
+				 </code>
+				}]
+				</code> 
+			</p>
+		</div>
+		<div>
+			<span class="prop-t">Facil acceso a los datos</span>
+			<p>
+				Puedes acceder a nuestra api mediante la direccion <a href="/api/post" class="url">/api/post</a>, esta consta de tres metodos mas:
+
+				<div>
+					<a href="#findAll"><span class="hash">#</span>Obtener todos los datos.</a> 
+					<a href="#findId"><span class="hash">#</span>Busqueda por Id.</a>  
+					<a href="#findRange"><span class="hash">#</span>Busqueda de rango.</a> 
+					<a href="#findLimit"><span class="hash">#</span>Limite de Resultados.</a>  
+				</div>
+			</p>
+		</div>
+		<div>
+			<span class="prop-t">Facil uso</span>
+		Con solo hacer un <span class="url">FETCH</span> o un simple <span class="url">REQUEST</span> a nuestra url, tendras de re torno los datos sin llaves de sifradas <i class="fas fa-key"></i> 
+		</div>
+	</div>
+</center>
+	
+	<div class="getting_stated mt-2">
+		<h3>Guia de iniciacion</h3>
+		<h5>Pruebad de regrecion en CURL</h5>
+		
+		<p>Primero Estaremos haciendo algunas pruebas de regrecion en <span class="v5_link">CURL</span> para probar la coneccion a la API. Estaremos usando todos los metodos de acceso 
+
+		<span class="v5_link">Busqueda por Id.</span>
+		<span class="v5_link ml-1">Busqueda de rango.</span>
+		<span class="v5_link ml-1">Limite de Resultados.</span>  
+		</p>
+ 
+		<div class="info-start bounceIn">
+			<i class="fas fa-info-circle"></i> para instalar <span class="v5_link">CURL</span> visita su pagina oficial <a href="https://curl.com">https://curl.com/download/</a>
+		</div>
+
+		<div class="curl">
+			Microsoft Windows [Versión 10.0.14393]
+			<br>(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+				<br><br>
+			C:\Users\test><code> curl</code>
+
+		</div>
+
+
+		<h5 class="mt-5" id="findAll"><span class="hash">#</span>Obtener todos los datos de la API</h5>
+
+		<p>Para obtener todos los datos de la API de <span class="v5_link">ATM CAMP</span> necitamos la primera url que es <span class="url">https://atmcamp.com/api/post/</span> esta retornara todos los datos en formato json el cual contendra la siguiente estructura:</p>
+
+		<code class="structure">
+		[{<br>
+			'_id': '...',<br>
+			'_title': '...', <br>
+			...<br>
+		}]
+		</code>
+
+		<div class="" id="getAllPost">
+
+			<div class="curl">
+			Microsoft Windows [Versión 10.0.14393]
+			<br>(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+				<br><br>
+			C:\Users\test> <code>curl -s https://atmcamp.com/api/post/ | json -i</code>
+
+			</div>
+
+			<div class="curl curl-limit">
+				<code>
+					<pre>
+[
+  {
+    "_id": "7",
+    "_title": "First test postgres insert data",
+    "_doc_body": "Contend",
+    "_tag_1": "TECNOLOGIA",
+    "_tag_2": "POSTGRESQL",
+    "_tag_3": "SQL",
+    "_author": "Admin",
+    "_likes": 0,
+    "_dislikes": 0,
+    "_views": 15,
+    "_join": "31 Dec 2019 16:55:14",
+    "_link": "www.github.com/read"
+  },
+  {
+    "_id": "5",
+    "_title": "ANGULAR.JS 2",
+    "_doc_body": "Este es un framework de JavaScript el cual realza iteraciones sockets auto-reload, que realizan cambios en vivo, Ã³sea en el transcurso que vas llenando un formulario o algo por el estilo ",
+    "_tag_1": "Mark Villas",
+    "_tag_2": "WEB",
+    "_tag_3": "ANGULAR",
+    "_author": "JavaScript",
+    "_likes": 0,
+    "_dislikes": 0,
+    "_views": 26,
+    "_join": "2019-12-23 18:39:37",
+    "_link": "www.github.com/read"
+  },
+  {
+    "_id": "4",
+    "_title": "Lanzamiento del post",
+    "_doc_body": "Acabo de terminar el UI del foro, dÃ¡ndome la idea del gran foro llamada STACK OVERFLOW. El cual cuenta con casi 20 millones de publicaciones ",
+    "_tag_1": "Pedro Corza",
+    "_tag_2": "WEB",
+    "_tag_3": "FRONT-END",
+    "_author": "FORO / ATM",
+    "_likes": 0,
+    "_dislikes": 0,
+    "_views": 3558,
+    "_join": "2019-12-16 05:04:47",
+    "_link": ""
+  }
+]
+					</pre>
+				</code>
+			</div>
+
+			<p>Ese es resultado denuestra consulta para obtener todos los datos de la api,
+			pero para algunos sistemas vamos a hacer consultas mas especficas para los datos.</p>
+
+		<h5 class="mt-5" id="findId"><span class="hash">#</span>Obtener datos de la API por Id</h5>
+
+		<p>Para obtener datos de la API por Id necesitamos la ayuda de la siguiente url <span class="url">/api/post/id/:id</span> esta consta de el parametro <span class="url">:id</span> que es lo que remplaremos por el Id de la publicacion que vamos a buscar. Ejemplo para obtener la publicacion con el Id 7</p>
+
+		<div class="curl">
+			Microsoft Windows [Versión 10.0.14393]
+			<br>(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+				<br><br>
+			C:\Users\test> <code>curl -s https://atmcamp.com/api/post/id/7 | json -i</code>
+		</div>
+		<div class="curl">
+<code>
+ 	<pre>
+[
+  {
+    _id: '7',
+    _title: 'First test postgres insert data',
+    _doc_body: 'Contend',
+    _tag_1: 'TECNOLOGIA',
+    _tag_2: 'POSTGRESQL',
+    _tag_3: 'SQL',
+    _author: 'Admin',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 15,
+    _join: '31 Dec 2019 16:55:14',
+    _link: 'www.github.com/read'
+  }
+]				
+	</pre>
+</code>
+		</div>
+
+		<h5 class="mt-5" id="findRange"><span class="hash">#</span>Obtener datos de la API por rango</h5>
+
+		<p>En este caso para obtener los datos debemos tener una referencia ejemplo</p>
+
+		<div class="info-start">
+			<i class="fas fa-info-circle"></i> Ejemplo se queremos buscar y obtener los datos entre el id 7, hasta el id 11
+		</div>	
+
+		<p>Necesitamos la suguiente url <span class="url">/api/post/limit/from/:from/to/:to/</span> en este caso consta de dos parametros <span class="url">:from</span> y <span class="url">:to</span>. [From] es desde el Id inicial y [to] es el limite de los datos.</p>
+
+		<div class="curl">
+			Microsoft Windows [Versión 10.0.14393]
+			<br>(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+				<br><br>
+			C:\Users\test> <code>curl -s https://atmcamp.com/api/post/limit/from/7/to/11 | json -i</code>
+		</div>
+
+<div class="curl curl-limit">
+<code>
+	<pre>
+[
+  {
+    _id: '7',
+    _title: 'First test postgres insert data',
+    _doc_body: 'Contend',
+    _tag_1: 'TECNOLOGIA',
+    _tag_2: 'POSTGRESQL',
+    _tag_3: 'SQL',
+    _author: 'Admin',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 15,
+    _join: '31 Dec 2019 16:55:14',
+    _link: 'www.github.com/read'
+  },
+  {
+    _id: '8',
+    _title: 'New Data',
+    _doc_body: 'HJIJN',
+    _tag_1: 'OS',
+    _tag_2: 'mk',
+    _tag_3: 'mlkm,',
+    _author: 'kmk',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 15,
+    _join: '31 Dec 2019 17:3:44',
+    _link: 'www.github.com/read'
+  },
+  {
+    _id: '9',
+    _title: 'FTP',
+    _doc_body: ' GET /post/id/4/Lanzamiento%20del%20post 200 319.357 ms - 157763\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 334.236 ms - 157782\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 334.252 ms - 157784\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 349.736 ms - 157950\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 324.520 ms - 158038\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 303.610 ms - 158038\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 81.581 ms - 157822\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 65.491 ms - 158038\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 38.047 ms - 158038\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 267.605 ms - 158038\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 245.301 ms - 157822\r\n' +
+      'GET /post/id/3/YT-R 200 130.831 ms - 155345\r\n' +
+      'GET /post/id/4/Lanzamiento%20del%20post 200 61.710 ms - 157822\r\n' +
+      'GET /post/id/8/New%20Data 200 31.828 ms - 156164\r\n' +
+      'GET /add 304 6.891 ms - -',
+    _tag_1: 'NULL',
+    _tag_2: 'NON',
+    _tag_3: 'FTP',
+    _author: 'Frank M',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 35,
+    _join: '31 Dec 2019 21:44:4',
+    _link: ''
+  }
+]		
+	</pre>
+</code>	
+</div>
+
+	<h5 class="mt-5" id="findLimit"><span class="hash">#</span>Obtener datos de la API por limite de resultado</h5>
+
+	<p>Este metodo clasifica la informacion en limites de resultado iniciando desde el Id (1) hasta el limite pusto para la consulta, la url para la consulta es <span class="url">/api/post/limit/:id</span> teniendo como parametro <span class="url">:id</span> el cual especifica el limite de la resultados de la consulta.</p>
+
+	<div class="curl">
+			Microsoft Windows [Versión 10.0.14393]
+			<br>(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+				<br><br>
+			C:\Users\test> <code>curl -s https://atmcamp.com/api/post/limit/2 | json -i</code>
+		</div>
+
+<div class="curl curl-limit">
+<code>
+	<pre>
+[
+  {
+    _id: '7',
+    _title: 'First test postgres insert data',
+    _doc_body: 'Contend',
+    _tag_1: 'TECNOLOGIA',
+    _tag_2: 'POSTGRESQL',
+    _tag_3: 'SQL',
+    _author: 'Admin',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 15,
+    _join: '31 Dec 2019 16:55:14',
+    _link: 'www.github.com/read'
+  },
+  {
+    _id: '5',
+    _title: 'ANGULAR.JS 2',
+    _doc_body: 'Este es un framework de JavaScript el cual realza iteraciones sockets auto-reload, que realizan cambios en vivo, Ã³sea en el transcurso que vas llenando un formulario o algo por el estilo ',
+    _tag_1: 'Mark Villas',
+    _tag_2: 'WEB',
+    _tag_3: 'ANGULAR',
+    _author: 'JavaScript',
+    _likes: 0,
+    _dislikes: 0,
+    _views: 26,
+    _join: '2019-12-23 18:39:37',
+    _link: 'www.github.com/read'
+  }
+]
+	</pre>		
+</code>
+</div>
+
+<div class="info-start">
+	
+<p>Puedes encontrar mas informacion de este proyecto en <a href="https://github/user/cc/cc/api" class="v5_link">https://github/user/cc/cc/api</a> recuerda que este es un proyecto open source, puedes bajar nuestro codigo fuente y realizar cambios que te gustarian verr en la plataforma, si dichos cambios son aprovados por los admins se aplicaran de inmediato.</p>
+
+<p>
+	Contactanos por el correo <i class="fas fa-envelope-square"></i> <a href="mailto:atm.camp@dev.com">atm.camp@dev.com</a>
+</p>
+
+<p>
+	API VERSION -- 1.0.0 <br>
+	&copy; 2019 - 2020
+</p>
+</div>
+		</div>
+	</div>
+</div>
+<%include templates/footer%>
+</body>
+</html>

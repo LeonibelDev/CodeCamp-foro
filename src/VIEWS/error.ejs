@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="icon" href="/public/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./fontawesome-free-5.9.0-web/css/all.min.css">
+
+	<style type="text/css">
+	img{
+		width: 100%;
+	}
+
+	.row{
+		transform:translateY(30%);
+	}
+
+	.badge{
+		background-color: #aaa;
+	}
+
+	.jumbotron .example span{
+		background-color:#aaa;
+		padding: 2px;
+		border-radius: 10%; 
+	}
+
+	code{
+		color: gray;
+		animation-name:aaa;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		position: relative;
+	}
+
+	span code:nth-child(1),
+	span code:nth-child(3){
+		color: gray;
+		animation-name:aaa;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		position: relative;
+		animation-timing-function: ease-in;	
+	}
+
+	span code:nth-child(2),
+	span code:nth-child(4){
+		color: gray;
+		animation-name:aaaa;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		position: relative;	
+	}
+
+	@keyframes aaa{
+		0%, 100%{
+			transform:scale(1);
+			opacity:1;
+			transform:translateX(0px);
+			
+		}	
+		50%{
+			
+			transform:scale(1.3);
+			opacity:0.3;
+			transform:translateX(-3px);
+		}		
+
+	}
+
+	@keyframes aaaa{
+		0%, 100%{
+			transform:scale(1);
+			opacity:1;
+			transform:translateX(0px);
+			
+		}	
+		50%{
+			
+			transform:scale(1.3);
+			opacity:0.3;
+			transform:translateX(3px);
+		}		
+
+	}
+
+	.jumbotron{
+		border: solid 1px rgba(0,0,0,.1);
+	}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<IMG SRC="./86418032b715698a4dfa6684b50c12af.gif">
+			</div>
+
+			<div class="col-md-6 jumbotron bg-light">
+				<h1>DIRECCION NO DISPONIBLE</h1>
+				<h4>La pagina o direccion a la que intentas acceder no se encuentra. <span class="badge">404</span> </h4>
+
+				<div class="px-5 text-center">
+				<span><code>>>>>></code> Intenta verificar tu conexion a internet <code><<<<<</code> </span><br>
+				<span>
+					<code>>>></code> o que la ruta este correctamente escrita <code><<<</code></span>
+				</div>
+
+				<p class="example pt-3">
+					<span class="text-danger">ww</span>.example.com
+					<br>
+					<span class="text-black">www</span>.example.com
+				</p>
+
+				<a href="/" class="btn btn-block btn-primary">INICIO</a>
+				
+				</div>	
+		</div>
+	</div>
+
+</body>
+</html>

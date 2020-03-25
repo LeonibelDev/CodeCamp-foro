@@ -1,0 +1,38 @@
+{
+  "name": "CODE_CAMP",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "server.js",
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "node-notifier": "^6.0.0",
+    "pg": "^7.17.0",
+    "sweetalert2": "^9.7.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.41.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

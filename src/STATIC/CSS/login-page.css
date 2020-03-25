@@ -1,0 +1,25 @@
+body{
+
+}
+
+.down{
+	position: all;
+	transform: translate(5%, 50%);
+}
+
+.form{
+	border-radius: 1%;
+}
+
+.form-control{
+	border:none;
+}
+
+.option{
+	position:relative;
+	float: right;
+	right:0;
+	bottom:0;
+	left:10px;
+	z-index:1;
+}

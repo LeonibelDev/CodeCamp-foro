@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%> - ATM CAMP</title>
+	<%include templates/css-extras-complement%>
+	<link rel="stylesheet" type="text/css" href="foro2.css">
+	<link rel="stylesheet" type="text/css" href="foro.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./api_css.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	
+</head>
+<body>
+		
+<%include templates/new_menu%>
+	<div class="">
+	<div class="global-foro">
+		
+		<div class="left-sidebar--sticky-container js-sticky-leftnav left mt-2">
+			<div class="bg-dark goHome">
+				<a href="/home" class="text-light lead"><i class="fas fa-building"></i> Go Home!</a>
+			</div>
+
+		<div class="left-padding">
+			<div class="global-table-contend">
+				<div class="global-table-contend-head-top">
+					<h5><i class="fas fa-fire"></i> TRENDING</h5>
+				</div>
+				<div class="global-table-contend-body">
+					<%for(var a=0; a<doneQuery.length; a++){%>
+					  	<p>
+								<a href="/foro/post/id/<%=doneQuery[a]._id%>/<%=doneQuery[a]._title%>">
+									<i class="fas fa-caret-right"></i> 
+									<%=doneQuery[a]._title%>
+								</a>
+						</p>
+						<%if(a==2){%>
+						<%break;%>
+					  <%}%>
+					<%}%>		
+				</div>
+			</div>
+
+			<div class="card card-tags mt-3 py-3">
+			<div class="tags">
+				<!-- <span><h3 class="filtertitle">Filtrar Por: </h3></span> -->
+				<a href="/foro:likes" class="tag filter-option">
+					<i class="fas fa-caret-up"></i> Likes
+				</a>
+				<a href="/foro/filter/tag/comments" class="tag filter-option">
+					<i class="fas fa-comment"></i> Comentarios
+				</a>
+
+				<a href="/foro/filter/tag/relevancia" class="tag filter-option">
+					<i class="fas fa-users"></i> Relevancia
+				</a>
+				
+				<a href="/foro:views" class="tag filter-option">
+					<i class="fas fa-eye"></i> Vistas
+				</a>
+
+				<a href="/foro:views" class="tag filter-option">
+					<i class="fas fa-ad"></i> Anuncios
+				</a>
+
+				<a href="/foro:views" class="tag filter-option">
+					<i class="fas fa-book-open"></i> Lectura
+				</a>
+
+				<a href="/foro:views" class="tag filter-option">
+					<i class="fas fa-question-circle"></i> Preguntas
+				</a>	
+
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+		<div class="snippet-hidden" id="content">
+
+			<div class="none doc-header-foro">
+				<div class="color-overlay">
+					<div class="none py-5">
+					<h2>API DE PUBLICACIONES</h2>
+					<h3>DE ATM CAMP</h3>
+					<div class="color-overlay">ATM CAMP API te brinda de una manera facil, acceder a todas las publicaciones de la comunidad, de una manera facil y rapida!</div>
+					</div>
+
+					<div class="social pb-2 ">
+						<div class="row read-more">
+							<div class="col-md-12 text-center text-light">
+								<span class="url bg-light">@ATM_CAMP <i class="fab fa-twitter-square text-primary"></i></span>
+								<span class="url bg-light">@ATM_CAMP <i class="fab fa-facebook-square text-primary"></i></span>
+								<span class="url bg-light">@ATM_CAMP <i class="fab fa-medium"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+				<div class="header-doc">
+					<h3 style="display: inline;">All Questions</h3> 
+					<a href="/add"><button class="btn btn-primary ml-auto" style="float: right; display: inline;">Ask Question</button></a>
+					<p class="all-Q-lenght"><%=post_data.length%> questions</p>
+				</div>
+			<div id="content2">
+
+				<div>
+			<%for(var i = 0; i < post_data.length; i++){%>
+				<div class="document" style="" id="<%=post_data[i]._id%>"> 
+					<div class="row">
+
+						<div class="col-md-2 rating">
+							<div class="vs col1">
+								<a href="/foro/like/posting._/<%=post_data[i]._id%>">
+									<i class="fas fa-caret-up"></i>
+								</a>
+								<br>
+									<span><%=post_data[i]._likes%></span>
+								
+							</div>
+							<div class="vs col2">
+								<span class="vew"><%=post_data[i]._views%></span>
+								<br><span>views</span>
+							</div>
+						</div>
+
+						<div class="col-md-7">
+							<div class="title-document">
+								<strong>
+									<a href="/foro/post/id/<%=post_data[i]._id%>/<%=post_data[i]._title%>">
+										<%=post_data[i]._title%>
+
+										<%if(post_data[i]._add){%>
+											<i class="fas fa-ad fa-xs text-dark"></i>
+										<%}%>
+										
+										<%if(post_data[i].question_not_body){%>
+											<i class="fas fa-question-circle fa-xs text-dark"></i>
+										<%}%>
+									</a>
+								</strong>
+							</div>
+							<section class="doc-body text-document">
+								<p><%=post_data[i]._doc_body%></p>
+							</section>
+
+							<div class="mt-2">
+								<span class="badge topic tag"><%=post_data[i]._tag_1%></span>
+								<span class="badge tag"><%=post_data[i]._tag_2%></span>
+								<span class="badge tag"><%=post_data[i]._tag_3%></span>
+							</div>
+	
+							<div class="mt-2 perfilacion">
+								<div class="row">
+									<!-- <div class="col-md-3">
+										<span class="align-self-center">
+											<i class="fas fa-comment"></i> 
+											%=post_data[i].TITLE.length%
+										</span>
+									</div> -->
+									<div class="col-md-3">
+										<span>
+											<i class="fas fa-eye"></i>
+											<%=post_data[i]._views%>	
+										</span>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<section>
+							<section>
+								<span class="badge">Publicado el</span>
+								<time class="badge"><%=post_data[i]._join%></time>
+							</section>
+							<section>
+								<p class="">
+								<span class="badge">Por:</span>
+								<%if(post_data[i]._author.trim().charAt(2) == "UPD"){%>
+								 <span class="creator"><%=post_data[i]._author%><i class="fas fa-certificate text-success"></i></span>
+								<span class="letter-ico"></span>
+								<%}%>
+
+								<%if(post_data[i]._author.trim().charAt(2) != "Jav"){%>
+								<span class="creator"><%=post_data[i]._author%></span>
+								<span class="letter-ico v5_link"></span>
+								<%}%>
+								</p>
+							</section>
+							<!-- <section class="mt-2">
+								<a href="/foro/post/id/<%=post_data[i]._id%>/<%=post_data[i]._title%>" class="btn btn-outline-primary py-1 btn-sm url btn-block">
+									Read Post
+								</a>
+							</section> -->
+							</section>
+						</div>
+					</div>
+				</div>
+				<%}%>
+				</div>
+			</div>	
+		</div>
+		<div class="right">
+
+			<div>
+				<h4 class="h-related-tags">Related Tags</h4>
+			
+				<%for(var x=0; x<post_data.length; x++){%>
+				<section>
+					<span class="tag">
+						<%=post_data[x]._tag_1%> 
+ 					</span> 
+ 					
+						<span class="text-muted"><span class="badge">x</span><%=post_data[x]._tag_1.length%></span> 
+				</section>
+				<%}%>
+			
+			</div>
+
+			<div class="global-table-contend">
+				<div class="global-table-contend-head-top">
+					Hola
+				</div>
+				<div class="global-table-contend-body">
+					<a href="">Example of trending <i class="fas fa-server"></i></a>
+				</div>
+				<div class="global-table-contend-body">
+					<a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+				</div>
+				<div class="global-table-contend-head">
+					Hola
+				</div>
+				<div class="global-table-contend-body">
+					<a href=""><i class="fas fa-sun"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="footerReq">
+	<%include templates/footer%>
+</div>
+
+<script type="text/javascript" src="./icons_tags.js"></script>
+<script type="text/javascript">
+   		function main(){
+
+   			var documentlengt = document.querySelectorAll('.document');
+   		for(var x = 0; x < documentlengt.length; x++){
+   			
+   			var username = document.querySelectorAll('.creator')[x].innerHTML.trim();
+   			var letterUser = document.querySelectorAll('.letter-ico')[x];
+
+   			letterUser.innerHTML = username.charAt(0);
+
+   			var docbody = document.querySelectorAll('.doc-body p')[x];
+
+   			if (docbody.innerHTML.length > 0) {
+   				docbody.innerHTML = docbody.innerHTML.substring(0, 100) + '...';
+   			}
+
+   		}   			
+   		}
+   		main();
+   			
+   	</script>
+<script type="text/javascript" src="./main.js"></script>
+<script type="text/javascript" src="./meridian.js"></script>
+<script type="text/javascript" src="./convertion_value_views.js"></script>
+	</div>
+</body>
+</html>
