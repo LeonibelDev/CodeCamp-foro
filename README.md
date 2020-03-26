@@ -8,7 +8,7 @@ The idea of this project falls into the problems of many citizens to publicize i
 Leonibel SR <https://github.com/LeonibelDev>
 
 ## main file
-* server.js 
+-- **server.js** 
 
 ##  tree / structure
 * server.js
@@ -27,7 +27,7 @@ Leonibel SR <https://github.com/LeonibelDev>
 
 ## for execute
 * install the node modules run -> **npm install**
-Modify the file db_connect in [./src/config/db_connect.js]
+* Modify the file db_connect in [./src/config/db_connect.js]
 * add you db port of postgres
 * add you db password of postgres 
 
