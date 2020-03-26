@@ -28,10 +28,10 @@ On this platform you can vote for posts you like the most and filter them by cat
     * TEMPLATES
 
 ## for execute
-* install the node modules run -> **npm install**
+* Install the node modules run -> **npm install**
 * Modify the file db_connect in [./src/config/db_connect.js]
-* add you db port of postgres
-* add you db password of postgres 
+* Add you db port of postgres
+* Add you db password of postgres 
 
 create the schemes of postgres in your system. the file is [./db_structure/project_Structure_db.sql]
 
