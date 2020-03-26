@@ -7,9 +7,7 @@ const pool = require('./config/db_connect');
 let fs = require('fs');
 let date = require('./config/datePost.js');
 let upt = express();
-upt.use(compression);
-// COOKIE WORK
-var cookie = require('cookie');
+upt.use(compression());
 
 const path = require('path'); 
 const os = require('os');
@@ -18,13 +16,6 @@ const os = require('os');
 const { Cripto, Desencript } = require('./config/cripto.lib.js'); 
 const crypto = new Cripto();
 const desencriptar = new Desencript();
-
-/*db*/
-// const sqlite3 = require('sqlite3').verbose();
-// let db = new sqlite3.Database('./models/newsletter.db');
-// let db_doc = new sqlite3.Database('./models/post.db');
-// let db_comments = new sqlite3.Database('./models/comment_post.db');
-
 
 router.get('/', (req, res)=>{
 
