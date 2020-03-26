@@ -1,14 +1,16 @@
 # CodeCamp-foro
 
 ## description
+
 Code Camp ATM is a forum-type social network in which ideas are shared and very curious questions given by our users are answered.
-The idea of this project falls into the problems of many citizens to publicize ideas. On this platform you can vote for posts you like the most and filter them by categories and tags available.
+The idea of this project falls into the problems of many citizens to publicize ideas. 
+On this platform you can vote for posts you like the most and filter them by categories and tags available.
 
 ### author
-Leonibel SR <https://github.com/LeonibelDev>
+> Leonibel SR [github](https://github.com/LeonibelDev "see my projects in github") or [facebook](https://facebook.com/ "contact me in facebook")
 
 ## main file
--- **server.js** 
+> server.js 
 
 ##  tree / structure
 * server.js
@@ -37,3 +39,6 @@ create the schemes of postgres in your system. the file is [./db_structure/proje
 **npm run start**
 or
 **node server.js**
+
+## screenshot
+![home screen](doc/screenshot/home.jpg)
